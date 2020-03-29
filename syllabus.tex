@@ -1,0 +1,158 @@
+\documentclass[11pt, a4paper]{article}
+%\usepackage{geometry}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{Data Science and Machine Learning} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\today} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim} % used to display code
+\usepackage{fancyvrb}
+\usepackage{acronym}
+\usepackage{amsthm}
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+
+
+
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.93}
+
+
+
+\lstset{
+%language=bash,                          % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=t,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\Large \textsc{Data Science and Machine Learning}}
+\end{center}
+\begin{center}
+Fall 2020
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+\rule{6in}{0.4pt}
+\begin{minipage}[t]{.75\textwidth}
+\begin{tabular}{llcccll}
+\textbf{Instructors:} & Thomas Mitterling, Max Thomasberger, Lukas Schmoigl \\
+\textbf{Email:} &  \href{mailto:lukas.schmoigl@wifo.ac.at}{lukas.schmoigl@wifo.ac.at} \\
+\textbf{Mode:} & 3 hours lecture + 2 hours research seminar \\
+\textbf{Time:} & tbd \\
+\textbf{Place:} & tbd \\
+\end{tabular}
+\end{minipage}
+\rule{6in}{0.4pt}
+\end{center}
+\vspace{.5cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+\noindent\textbf{Course Pages:} \begin{itemize}
+\item \url{https://learn.wu.ac.at/}
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Office Hours:} After class, or by appointment, or post your questions in the forum provided for this purpose on LEARN.
+
+\vskip.15in
+\noindent\textbf{Main References:} %\footnotemark
+This is a  restricted list of various interesting and useful books that will be touched during the course. You need to consult them occasionally.
+\begin{itemize}
+\item Christopher M. Bishop, {\textit{Pattern Recognition and Machine Learning}}, Springer, 2006.
+\item Richard O. Duda, Peter E. Hart, and David G. Stork, {\textit{Pattern Classification}}, Wiley, 2nd ed., 2000.
+\item Peter Flach, {\textit{Machine Learning: The Art and Science of Algorithms that Make Sense of Data}}, Cambridge University Press, 2012.
+
+\end{itemize} 
+
+% \footnotetext{.}
+
+\vskip.15in
+\noindent\textbf{Objectives:}  This course is designed for graduate students of economics and offers an introduction into modern techniques in data science. 
+
+\vskip.15in
+\noindent\textbf{Prerequisites:}
+Basic understanding of probability, statistics, linear algebra and calculus is assumed. Programming skills are required (e.g. R, Python,...)
+
+
+\vspace*{.15in}
+
+\noindent \textbf{Tentative Course Outline:}
+\begin{center} 
+\begin{minipage}{5in}
+\begin{flushleft}
+%Chapter 1 \dotfill ~$\approx$ 3 days \\
+{\color{darkgreen}{\Rectangle}} ~Machine Leraning 1: Regression and classification trees \\
+{\color{darkgreen}{\Rectangle}} ~Machine Learning 2: Cross-Validation and model validation techniques \\
+{\color{darkgreen}{\Rectangle}} ~Machine Learning 3: Document classification \\
+{\color{blue}{\Rectangle}} ~Data Science 1: Data wrangling \\
+{\color{blue}{\Rectangle}} ~Data Science 2: Data science toolkit (e.g. APIs, geocoding, fuzzy matching,...) \\
+{\color{blue}{\Rectangle}} ~Data Science 3: Data visualization \\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\vspace*{.15in}
+\noindent\textbf{Grading Policy:} lecture: Midterm (40\%), Final Exam (40\%), class participation (20\%), research seminar: Homework (50\%), Project (50\%).
+
+\vskip.15in
+\noindent\textbf{Important Dates:}
+\begin{center} \begin{minipage}{3.8in}
+\begin{flushleft}
+Midterm      \dotfill ~tbd  \\
+Final Exam       \dotfill ~tbd  \\
+Project Deadline \dotfill ~tbd \\
+
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\vskip.15in
+\noindent\textbf{Class Policy:}  
+\begin{itemize}
+\item Regular attendance is essential and expected.
+\end{itemize}
+
+%%%%%% THE END 
+\end{document} 
